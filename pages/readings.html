@@ -49,49 +49,58 @@
     </div>
 </header>
     
-    <div class="main mt-5 pt-5 container">
-        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#sugarModal">
-            قياس السكر
-        </button>
+<div class="main mt-5 pt-5 container">
+  <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#sugarModal">
+      قياس السكر
+  </button>
 
-        <div class="modal fade" id="sugarModal" tabindex="-1" aria-labelledby="sugarModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="sugarModalLabel">إضافة قياس جديد</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="sugarForm">
-                            <div class="mb-3">
-                                <label for="sugarLevel" class="form-label">مستوى السكر (mg/dL)</label>
-                                <input type="number" class="form-control" id="sugarLevel" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="measurementTime" class="form-label">وقت القياس</label>
-                                <input type="datetime-local" class="form-control" id="measurementTime" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">حفظ</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="modal fade" id="sugarModal" tabindex="-1" aria-labelledby="sugarModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="sugarModalLabel">إضافة / تعديل قياس</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="sugarForm">
+                      <input type="hidden" id="editIndex" value="-1">
+                      <div class="mb-3">
+                          <label for="sugarLevel" class="form-label">مستوى السكر (mg/dL)</label>
+                          <input type="number" class="form-control" id="sugarLevel" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="measurementTime" class="form-label">وقت القياس</label>
+                          <input type="datetime-local" class="form-control" id="measurementTime" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="measurementType" class="form-label">نوع القياس</label>
+                          <select class="form-control" id="measurementType" required>
+                              <option value="صائم">صائم</option>
+                              <option value="فاطر">فاطر</option>
+                              <option value="عشوائي">عشوائي</option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">حفظ</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <table class="table table-striped mt-3">
+      <thead>
+          <tr>
+              <th>الوقت</th>
+              <th>مستوى السكر</th>
+              <th>نوع القياس</th>
+              <th>إجراءات</th>
+          </tr>
+      </thead>
+      <tbody id="sugarTableBody">
         
-        <table class="table table-striped mt-3">
-            <thead>
-                <tr>
-                    <th>الوقت</th>
-                    <th>مستوى السكر</th>
-                    <th>إجراء</th>
-                </tr>
-            </thead>
-            <tbody id="sugarTableBody">
-               
-            </tbody>
-        </table>
-    </div>
-
+      </tbody>
+  </table>
+</div>
 
     <script src="../js/app.js"></script>
 
