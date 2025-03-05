@@ -9,15 +9,39 @@ let currentIndex = 0;
 const newsText = document.getElementById("news-text");
 
 function changeNews() {
-    // تحريك النص لأعلى مع تأثير سلس
+    
     newsText.style.transform = "translateY(-100%)";
     setTimeout(() => {
-        // تغيير النص بعد انتهاء الحركة
+        
         currentIndex = (currentIndex + 1) % newsList.length;
         newsText.innerText = newsList[currentIndex];
-        // إعادة النص لمكانه الأصلي بدون تأثير
+        
         newsText.style.transform = "translateY(0)";
-    }, 500); // نصف ثانية لتأثير الحركة
+    }, 500); 
 }
 
-setInterval(changeNews, 4000); // تغيير الخبر كل 4 ثواني
+setInterval(changeNews, 4000); 
+document.getElementById('sugarForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const sugarLevel = document.getElementById('sugarLevel').value;
+    const measurementTime = document.getElementById('measurementTime').value;
+    
+    if (sugarLevel && measurementTime) {
+        const tableBody = document.getElementById('sugarTableBody');
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${measurementTime}</td>
+            <td>${sugarLevel}</td>
+            <td><button class="btn btn-danger btn-sm delete-btn">حذف</button></td>
+        `;
+        tableBody.appendChild(newRow);
+        document.getElementById('sugarForm').reset();
+        bootstrap.Modal.getInstance(document.getElementById('sugarModal')).hide();
+    }
+});
+
+document.getElementById('sugarTableBody').addEventListener('click', function(event) {
+    if (event.target.classList.contains('delete-btn')) {
+        event.target.closest('tr').remove();
+    }
+});
