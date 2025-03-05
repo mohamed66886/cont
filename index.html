@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كنترول - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+    <nav class="navbar navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary" href="#">كنترول</a>
+          <button class="navbar-toggler border-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon" style="filter: invert(29%) sepia(97%) saturate(1301%) hue-rotate(203deg) brightness(95%) contrast(91%);"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-white text-primary" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasNavbarLabel">كنترول</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-bold opacity-75 active" aria-current="page" href="index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-primary" href="pages/readings.html">قياسات السكر</a></li>
+                <li class="nav-item"><a class="nav-link text-primary" href="medications.html">الأدوية</a></li>
+                <li class="nav-item"><a class="nav-link text-primary" href="nutrition.html">التغذية</a></li>
+                <li class="nav-item"><a class="nav-link text-primary" href="forum.html">المنتدى</a></li>
+                <li class="nav-item"><a class="nav-link text-primary" href="doctors.html">دليل الأطباء</a></li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2 border-primary" type="search" placeholder="بحث" aria-label="Search">
+                <button class="btn btn-primary" type="submit">بحث</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </nav>
+    </div>
+    </header>
+    <div class="news">
+
+    <div class="container mt-4">
+        <div class="news-ticker">
+            <div class="news-title">أهم الأخبار</div>
+            <div class="news-content">
+                <p id="news-text">نائب رئيس مجلس الوزراء ووزير الصحة يرأس الاجتماع الأول للجنة التنفيذية الخاصة باستقبال المصاب.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="option">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="#"><i class="bi bi-house-door display-4"></i></a>
+                        <h5 class="mt-2">الرئيسية </h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="pages/preadings.html"><i class="bi bi-thermometer display-4"></i></a>
+                        <h5 class="mt-2">قياسات السكر</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="medications.html"><i class="bi bi-capsule-pill display-4"></i></a>
+                        <h5 class="mt-2">الأدوية</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="nutrition.html"><i class="bi bi-egg-fried display-4"></i></a>
+                        <h5 class="mt-2">التغذية</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="forum.html"><i class="bi bi-chat-dots display-4"></i></a>
+                        <h5 class="mt-2">المنتدى</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mt-3">
+                    <div class="card text-center p-3">
+                        <a href="doctors.html"><i class="bi bi-hospital display-4"></i></a>
+                        <h5 class="mt-2">دليل الأطباء</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="news2">
+    <div class="container mt-4">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- الشريحة الأولى -->
+                <div class="carousel-item active">
+                    <img src="img/FxsxYH1XsAE3Pp1.jpg" class="d-block w-100" alt="افتتاح مستشفى جديد">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>افتتاح مستشفى جديد</h5>
+                        <p>افتتاح مستشفى حديث لتقديم الخدمات الطبية للمناطق النائية.</p>
+                    </div>
+                </div>
+    
+                <!-- الشريحة الثانية -->
+                <div class="carousel-item">
+                    <img src="img/19_2021-637676660252303097-230.jpg" class="d-block w-100" alt="زيادة الحد الأدنى للأجور">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>زيادة الحد الأدنى للأجور</h5>
+                        <p>الحكومة تعلن رفع الحد الأدنى للأجور لدعم العاملين في القطاعين العام والخاص.</p>
+                    </div>
+                </div>
+    
+                <!-- الشريحة الثالثة -->
+                <div class="carousel-item">
+                    <img src="img/19_2024-638622893120372292-37.jpg" class="d-block w-100" alt="مبادرة جديدة للتعليم">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>مبادرة جديدة للتعليم</h5>
+                        <p>إطلاق مبادرة لدعم التعليم الرقمي وتوفير أجهزة لوحية للطلاب.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- أزرار التنقل -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">السابق</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">التالي</span>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
